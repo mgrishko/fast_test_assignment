@@ -12,3 +12,8 @@ workstation2v = Computer2v.new(1, ds)
 p workstation2v.mouse
 p workstation2v.cpu
 p workstation2v.keyboard
+
+workstation3v = Computer3v.new(1, ds)
+p workstation3v.mouse
+p workstation3v.cpu
+p workstation3v.keyboard
