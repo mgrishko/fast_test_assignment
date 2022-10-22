@@ -31,3 +31,22 @@ class Computer
   end
 end
 
+class Computer2v
+  POSSIBLE_DEVICES = %w(mouse cpu keyboard).freeze
+
+  def initialize(computer_id, data_source)
+    @id = computer_id
+    @data_source = data_source
+  end
+
+  POSSIBLE_DEVICES.each do |method_name|
+    define_method method_name do
+      info = @data_source.public_send("get_#{method_name}_info", @id)
+      price = @data_source.public_send("get_#{method_name}_price", @id)
+      result = "#{method_name.capitalize}: #{info} ($#{price})"
+      return "* #{result}" if price >= 100
+      result
+    end
+  end
+end
+
