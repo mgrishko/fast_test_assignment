@@ -32,7 +32,7 @@ class Computer
 end
 
 class Computer2v
-  POSSIBLE_DEVICES = %w(mouse cpu keyboard).freeze
+  POSSIBLE_DEVICES = %w(mouse cpu keyboard display).freeze
 
   def initialize(computer_id, data_source)
     @id = computer_id
@@ -51,7 +51,12 @@ class Computer2v
 end
 
 class Computer3v
-  POSSIBLE_DEVICES = %i(mouse cpu keyboard).freeze
+  POSSIBLE_DEVICES = %i(mouse cpu keyboard display).freeze
+
+  # maybe this is badidea, to redefine reserved method display
+  # In normal situation it will be discussed with team
+  alias display_alias display
+  undef_method :display
 
   def initialize(computer_id, data_source)
     @id = computer_id
