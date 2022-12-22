@@ -1,5 +1,3 @@
-# ruby_tuesday
-
 ## A Duplication Problem
 Refactor duplicated code.
 
