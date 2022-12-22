@@ -22,7 +22,7 @@ It looks like workstation number 42 has a 2.9GHz CPU and a luxurious $60 mouse. 
 
 You have to wrap DS into an object that fits the reporting application. This means each Computer must be an object. This object has a single method for each component, returning a string that describes both the component and its price. Remember that price limit set by the purchasing department? Keeping this requirement in mind, you know that if the component costs $100 or more, the string must begin with an asterisk to draw people’s attention.
 You kick off development by writing the first three methods in the Computer class: 
-https://github.com/mani47/ruby_tuesday/blob/master/computer.rb
+https://github.com/mgrishko/fast_test_assignment/blob/main/computer.rb
 
 At this point in the development of Computer, you find yourself bogged down in a swampland of repetitive copy and paste. You have a long list of methods
 left to deal with, and you should also write tests for each and every method, because it’s easy to make mistakes in duplicated code.
